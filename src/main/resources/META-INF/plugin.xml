@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>com.file.commentrate</id>
+    <name>Comment Rate Calculator</name>
+    <vendor email="940702494@example.com" url="">Comment Rate Plugin</vendor>
+
+    <description><![CDATA[
+    Calculate comment rate for Java files with right-click context menu.
+    Shows total lines, code lines, comment lines and comment rate percentage.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <actions>
+        <action id="CommentRateAction"
+                class="com.file.commentrate.commentrateplugin.CommentRateAction"
+                text="Calculate Comment Rate"
+                description="Calculate comment rate for this file">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="$Cut"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="$Cut"/>
+        </action>
+    </actions>
+</idea-plugin>
