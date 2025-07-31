@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class CommentRateAction extends AnAction {
 
-    //测试 732
+    // 插件入口点，处理注释率统计的动作
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         Project project = e.getProject();
