@@ -11,6 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class CommentRateAction extends AnAction {
 
+    //测试 731
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
         Project project = e.getProject();
@@ -24,7 +25,7 @@ public class CommentRateAction extends AnAction {
 
         CommentRateCalculator calculator = new CommentRateCalculator();
         CommentRateResult result = calculator.calculate(psiFile);
-        
+
         CommentRateDialog dialog = new CommentRateDialog(project, result, virtualFile.getName());
         dialog.show();
     }
@@ -32,8 +33,8 @@ public class CommentRateAction extends AnAction {
     @Override
     public void update(@NotNull AnActionEvent e) {
         VirtualFile file = e.getData(CommonDataKeys.VIRTUAL_FILE);
-        boolean visible = file != null && 
-                         !file.isDirectory() && 
+        boolean visible = file != null &&
+                         !file.isDirectory() &&
                          "java".equalsIgnoreCase(file.getExtension());
         e.getPresentation().setEnabledAndVisible(visible);
     }
