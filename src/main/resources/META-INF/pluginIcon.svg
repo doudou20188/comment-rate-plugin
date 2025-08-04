@@ -1,12 +1,56 @@
 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M32.0845 7.94025V4H24.0203V7.9896H16.029V4H7.91553V7.94025H4V36H16.0044V32.0045C16.0058 30.9457 16.4274 29.9308 17.1766 29.1826C17.9258 28.4345 18.9412 28.0143 20 28.0143C21.0588 28.0143 22.0743 28.4345 22.8234 29.1826C23.5726 29.9308 23.9942 30.9457 23.9956 32.0045V36H36V7.94025H32.0845Z"
-          fill="url(#paint0_linear)"/>
+    <!-- 背景圆形 -->
+    <circle cx="20" cy="20" r="18" fill="url(#paint0_linear)" stroke="url(#paint1_linear)" stroke-width="2"/>
+
+    <!-- 星级评分 (3颗星) - 缩小尺寸 -->
+    <g transform="translate(12, 10) scale(0.6)">
+        <!-- 第1颗星 -->
+        <path d="M6 2L7.5 5H11L8.5 7.5L9.5 11L6 9L2.5 11L3.5 7.5L1 5H4.5L6 2Z"
+              fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+
+        <!-- 第2颗星 -->
+        <path d="M12 2L13.5 5H17L14.5 7.5L15.5 11L12 9L8.5 11L9.5 7.5L7 5H10.5L12 2Z"
+              fill="#FFD700" stroke="#FFA500" stroke-width="0.5"/>
+
+        <!-- 第3颗星 -->
+        <path d="M18 2L19.5 5H23L20.5 7.5L21.5 11L18 9L14.5 11L15.5 7.5L13 5H16.5L18 2Z"
+              fill="#E0E0E0" stroke="#CCCCCC" stroke-width="0.5"/>
+    </g>
+
+    <!-- 百分比文字 -->
+    <text x="20" y="24" text-anchor="middle"
+          font-family="SF Pro Display, -apple-system, BlinkMacSystemFont, sans-serif"
+          font-size="8" font-weight="600" fill="#FFFFFF">
+        20%
+    </text>
+
+    <!-- 装饰元素：代码符号和comment文字 -->
+    <text x="3" y="30" font-family="JetBrains Mono, Monaco, monospace"
+          font-size="5.5" fill="#FFFFFF" opacity="0.8">
+        //
+    </text>
+    <text x="20" y="30" text-anchor="middle" font-family="JetBrains Mono, Monaco, monospace"
+          font-size="5.5" fill="#FFFFFF" opacity="0.9">
+        comment
+    </text>
+<!--    <text x="35" y="30" font-family="JetBrains Mono, Monaco, monospace"-->
+<!--          font-size="5.5" fill="#FFFFFF" opacity="0.8">-->
+<!--        */-->
+<!--    </text>-->
+
     <defs>
-        <linearGradient id="paint0_linear" x1="2.94192" y1="4.89955" x2="37.7772" y2="39.7345"
-                        gradientUnits="userSpaceOnUse">
-            <stop offset="0.15937" stop-color="#3BEA62"/>
-            <stop offset="0.5404" stop-color="#3C99CC"/>
-            <stop offset="0.93739" stop-color="#6B57FF"/>
+        <!-- 主背景渐变 -->
+        <linearGradient id="paint0_linear" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#4CAF50"/>
+            <stop offset="50%" stop-color="#2196F3"/>
+            <stop offset="100%" stop-color="#9C27B0"/>
+        </linearGradient>
+
+        <!-- 边框渐变 -->
+        <linearGradient id="paint1_linear" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#66BB6A"/>
+            <stop offset="50%" stop-color="#42A5F5"/>
+            <stop offset="100%" stop-color="#AB47BC"/>
         </linearGradient>
     </defs>
 </svg>
