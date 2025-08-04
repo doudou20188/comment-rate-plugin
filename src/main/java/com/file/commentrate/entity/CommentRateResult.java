@@ -1,4 +1,4 @@
-package com.file.commentrate.commentrateplugin;
+package com.file.commentrate.entity;
 
 public class CommentRateResult {
     public final int totalLines;
@@ -7,8 +7,8 @@ public class CommentRateResult {
     public final double commentRate;
     public final int methodComments;
     public final int classComments;
-    
-    public CommentRateResult(int totalLines, int effectiveCodeLines, int commentLines, 
+
+    public CommentRateResult(int totalLines, int effectiveCodeLines, int commentLines,
                            double commentRate, int methodComments, int classComments) {
         this.totalLines = totalLines;
         this.effectiveCodeLines = effectiveCodeLines;
@@ -17,14 +17,14 @@ public class CommentRateResult {
         this.methodComments = methodComments;
         this.classComments = classComments;
     }
-    
+
     public String getGrade() {
         if (commentRate >= 40) return "优秀";
         if (commentRate >= 25) return "良好";
         if (commentRate >= 15) return "一般";
         return "偏低";
     }
-    
+
     public String getGradeEmoji() {
         if (commentRate >= 40) return "✅";
         if (commentRate >= 25) return "✅";

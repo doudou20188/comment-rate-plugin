@@ -1,10 +1,10 @@
 package com.file.commentrate.commentrateplugin;
 
+import com.file.commentrate.entity.CommentRateResult;
 import com.intellij.psi.*;
 import com.intellij.psi.javadoc.PsiDocComment;
 
 import java.util.concurrent.atomic.AtomicInteger;
-import java.util.regex.Pattern;
 
 public class CommentRateCalculator {
 

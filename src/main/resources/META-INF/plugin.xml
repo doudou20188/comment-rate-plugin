@@ -11,12 +11,17 @@
     <depends>com.intellij.modules.platform</depends>
     <depends>com.intellij.modules.java</depends>
 
+<!--    动作注册-->
     <actions>
         <action id="CommentRateAction"
                 class="com.file.commentrate.commentrateplugin.CommentRateAction"
                 text="Calculate Comment Rate"
                 description="Calculate comment rate for this file">
+
+            <!--右键菜单-->
             <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="$Cut"/>
+
+            <!--编辑右键-->
             <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="$Cut"/>
         </action>
     </actions>

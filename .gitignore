@@ -9,6 +9,12 @@ build/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+.idea/git_toolbox_prj.xml
+.idea/git_toolbox_blame.xml
+.idea/uiDesigner.xml
+.idea/workspace.xml
+.idea/kotlinc.xml
+.idea/gradle.xml
 *.iws
 *.iml
 *.ipr

@@ -1,5 +1,7 @@
 package com.file.commentrate.commentrateplugin;
 
+import com.file.commentrate.view.CommentRateDialog;
+import com.file.commentrate.entity.CommentRateResult;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -24,12 +26,18 @@ public class CommentRateAction extends AnAction {
         if (psiFile == null) return;
 
         CommentRateCalculator calculator = new CommentRateCalculator();
+        // 选中文件，并解析文件的注释率
         CommentRateResult result = calculator.calculate(psiFile);
-
+        // 结果渲染、展示
         CommentRateDialog dialog = new CommentRateDialog(project, result, virtualFile.getName());
         dialog.show();
     }
 
+
+    /**
+     * 可见区过滤
+     * @param e
+     */
     @Override
     public void update(@NotNull AnActionEvent e) {
         VirtualFile file = e.getData(CommonDataKeys.VIRTUAL_FILE);
