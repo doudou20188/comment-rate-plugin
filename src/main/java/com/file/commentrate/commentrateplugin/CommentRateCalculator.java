@@ -126,9 +126,18 @@ public class CommentRateCalculator {
         if (trimmedLine.equals("/*")) {
             return true;
         }
+        // 只有 /** 的行
+        if (trimmedLine.equals("/**")) {
+            return true;
+        }
 
         // 只有 */ 的行
         if (trimmedLine.equals("*/")) {
+            return true;
+        }
+
+        // 只有 **/ 的行
+        if (trimmedLine.equals("**/")) {
             return true;
         }
 
