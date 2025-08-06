@@ -54,6 +54,8 @@ public class CommentRateCalculator {
         double commentRate = effectiveCodeLines > 0 ?
             (double) commentLines * 100 / effectiveCodeLines : 0;
 
+
+
         return new CommentRateResult(
             totalLines,
             effectiveCodeLines,
